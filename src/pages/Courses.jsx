@@ -7,18 +7,18 @@ function Courses() {
   return (
     <div>
       <div className='row'>
-        {courses[0].map((course) => (
-          <Course {...course} />
+        {courses[0].map((course, idx) => (
+          <Course key={idx} {...course} />
         ))}
       </div>
       <div className='row'>
-        {courses[1].map((course) => (
-          <Course {...course} />
+        {courses[1].map((course, idx) => (
+          <Course key={idx} {...course} />
         ))}
       </div>
       <div className='row'>
-        {courses[2].map((course) => (
-          <Course {...course} />
+        {courses[2].map((course, idx) => (
+          <Course key={idx} {...course} />
         ))}
       </div>
     </div>
