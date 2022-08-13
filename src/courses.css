@@ -1,0 +1,153 @@
+/*=============== Global Styles =============== */
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-bg-primary: #f4f4f4;
+  --color-bg-white: #fff;
+  --color-bg-yellow: #ffe168;
+  --color-bg-blue: #38b6ff;
+  --color-bg-green: #c9e265;
+  --color-hr: #3d3d3d;
+  --color-shadow: #d8d8d8;
+  --color-typo-primary: #000;
+  --color-typo-secondary: #848484;
+  --light-shadow: var(--color-shadow) 5px 0px 0px 0px;
+}
+
+body {
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: var(--color-bg-white);
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+h1,
+h2 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 100x;
+}
+
+/* Courses */
+.container {
+  background-color: var(--color-bg-primary);
+  max-width: 60vw;
+  padding: 2rem 5rem;
+  margin: 3rem auto;
+}
+/* header */
+.header {
+  margin-bottom: 5rem;
+  position: relative;
+}
+.header::after {
+  content: '';
+  width: 42%;
+  height: 1px;
+  background-color: var(--color-hr);
+  position: absolute;
+  bottom: -1.5rem;
+  left: 28%;
+}
+.header h1 {
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+/* card */
+.row {
+  max-width: 100%;
+  margin: 0 auto 4rem;
+  display: flex;
+  column-gap: 5rem;
+  justify-content: center;
+}
+.card {
+  background-color: #fff;
+  color: #000;
+  min-width: 10rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: var(--light-shadow);
+}
+.card h2 {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.2rem;
+}
+.card .dur {
+  font-weight: bold;
+}
+.card .btn {
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+}
+.yellow {
+  background-color: var(--color-bg-yellow);
+}
+.green {
+  background-color: var(--color-bg-green);
+}
+.blue {
+  background-color: var(--color-bg-blue);
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 0.5rem;
+  }
+  .container {
+    max-width: 100vw;
+    padding: 1rem;
+  }
+  .row {
+    flex-direction: column;
+    gap: 1rem 0;
+  }
+  .card {
+    min-width: 60vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    max-width: 100vw;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 70vw;
+    padding: 2rem 6rem;
+  }
+  .row {
+    gap: 0 4rem;
+  }
+}
